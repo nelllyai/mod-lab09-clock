@@ -47,8 +47,6 @@ namespace clock
 
             gState = graphics.Save();
             graphics.RotateTransform(6 * dateTime.Second);
-            graphics.DrawLine(aquamarinePen, 3, 0, -60, -60);
-            graphics.DrawLine(aquamarinePen, -3, 0, -60, -60);
             graphics.DrawLine(aquamarinePen, 0, 0, -60, -60);
             graphics.Restore(gState);
 
@@ -67,7 +65,7 @@ namespace clock
             graphics.DrawLine(turquoisePen, 0, 0, -30, -30);
             graphics.Restore(gState);
 
-            for (int i = 0; i < 12; ++i)
+            for (int i = 0; i < 12; i++)
             {
                 gState = graphics.Save();
                 graphics.RotateTransform(30 * i + 45);
@@ -75,14 +73,13 @@ namespace clock
                 graphics.Restore(gState);
             }
 
-            for (int i = 0; i < 36; ++i)
+            for (int i = 0; i < 72; i++)
             {
                 gState = graphics.Save();
-                graphics.RotateTransform(10 * i);
+                graphics.RotateTransform(6 * i + 3);
                 graphics.DrawLine(grayPen, -67, -67, -70, -70);
                 graphics.Restore(gState);
             }
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
