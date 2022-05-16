@@ -51,7 +51,7 @@ namespace clock
             graphics.Restore(gState);
 
             gState = graphics.Save();
-            graphics.RotateTransform(6 * dateTime.Minute + (float)dateTime.Second / 10);
+            graphics.RotateTransform(6 * dateTime.Minute + (float)dateTime.Second / 5);
             graphics.DrawLine(bluePen, 3, 0, -45, -45);
             graphics.DrawLine(bluePen, -3, 0, -45, -45);
             graphics.DrawLine(bluePen, 0, 0, -45, -45);
@@ -59,7 +59,7 @@ namespace clock
             graphics.Restore(gState);
 
             gState = graphics.Save();
-            graphics.RotateTransform(6 * dateTime.Hour + (float)dateTime.Minute / 10);
+            graphics.RotateTransform(6 * dateTime.Hour + (float)dateTime.Minute / 5);
             graphics.DrawLine(turquoisePen, 2, 0, -30, -30);
             graphics.DrawLine(turquoisePen, -2, 0, -30, -30);
             graphics.DrawLine(turquoisePen, 0, 0, -30, -30);
